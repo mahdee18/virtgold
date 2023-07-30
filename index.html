@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Second page</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#27213C]">
+  <!-- Header -->
+  <header
+    class="relative z-20 w-full border-b shadow-lg border-b-1 border-slate-200 bg-[#27213C] shadow-slate-700/6 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
+    <div class="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
+      <!-- Top Bar Section -->
+      <article
+        class="hidden h-[37px] lg:flex justify-center items-center bg-gradient-to-r from-[#FEAF04] from-100% via-[#D98D1B] via-1000% to-[#FFD056] to-90%">
+        <p class="text-[12px] leading-[14px] font-[600] text-center text-[#1B1B1B]">
+          Now Accepting Credit Card & Other Payment Methods
+        </p>
+      </article>
+      <!-- Navbar Section -->
+      <nav class=" lg:pt-0 flex justify-start items-center border-white border-opacity-[15%]"></nav>
+      <!-- Navbar Container -->
+      <article
+        class="flex justify-between items-center gap-5 w-[calc(100vw-48px)] lg:w-[calc(100vw-200px)] mx-auto relative py-3">
+        <!-- First Column of the Navbar -->
+        <div class="flex items-center justify-between gap-[40px]">
+          <!-- Navbar Logo -->
+          <img src="./assets/image 2.png" class="p-[8px_10px] bg-white rounded-full" alt="" />
+          <!-- Navbar Search Box -->
+          <div
+            class="hidden lg:flex justify-between items-center gap-2 border border-white border-opacity-25 p-[8px_13px] rounded-[4px] w-[470px]">
+            <input type="text" placeholder="Search"
+              class="bg-transparent text-sm focus:pl-4 max-w-full duration-300 border-0 outline-o focus:outline-0 placeholder:opacity-70" />
+            <button>
+              <i class="fa-solid fa-magnifying-glass opacity-70"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Second Column of the Navbar for large devices-->
+        <div class="lg:flex items-center gap-1 hidden">
+          <!-- Navbar Currency Dropdown -->
+          <div class="text-[12px] leading-[20px] font-[600] flex items-center">
+            <label for=""><i class="fa-solid fa-sack-dollar"></i></label>
+            <select class="bg-transparent cursor-pointer" name="USD" id="currency">
+              <option value="USD" selected>USD</option>
+              <option value="BDT">BDT</option>
+            </select>
+          </div>
+          <!-- Login Button -->
+          <button class="text-[13px] leading-[22px] font-[700] hover:text-[#FCAB00] duration-200 mx-[24px]">
+            Login
+          </button>
+          <!-- Sign Up Button -->
+          <div class="flex items-center gap-[7px]">
+            <button
+              class="p-[7px_9px_7px_9px] lg:p-[11px_18px_11px_17px] text-[13px] text-[#27213C] leading-[22px] font-[700] border border-[#FCAB00] bg-[#FCAB00] text-center rounded-[300px] hover:bg-transparent hover:text-[#FCAB00] duration-200">
+              <span class="whitespace-pre">Sign Up</span>
+            </button>
+            <button
+              class="p-[11px_13px] text-[13px] text-[#27213C] leading-[22px] font-[700] border border-[#FCAB00] bg-[#FCAB00] text-center rounded-[300px] hover:bg-transparent hover:text-[#FCAB00] duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.5" aria-labelledby="title description" role="graphics-symbol">
+                <title id="title">Cart Icon</title>
+                <desc id="description">Cart icon with items</desc>
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- This is only for mobile devices -->
+        <div class="lg:hidden">
+          <!-- Menu Bar Icon for small devices -->
+          <button id="openMenu">
+            <i class="fa-solid fa-bars text-[33px]"></i>
+          </button>
+          <!-- Navbar Menu List for mobile devices -->
+          <div id="menuList"
+            class="bg-[#241f36] z-30 text-white absolute top-full right-0 duration-300 border border-white border-opacity-25 rounded-[10px] px-4 py-6 w-[300px]">
+            <div class="flex flex-col gap-5">
+              <!-- Search Box for mobile devices -->
+              <div
+                class="flex justify-between items-center gap-2 border border-white border-opacity-25 p-[8px_13px] rounded-[4px]">
+                <input type="text" placeholder="Search"
+                  class="bg-transparent text-sm focus:pl-4 w-full duration-300 border-0 outline-o focus:outline-0 placeholder:opacity-70" />
+                <button>
+                  <i class="fa-solid fa-magnifying-glass opacity-70"></i>
+                </button>
+              </div>
+              <!-- Currency Dropdown -->
+              <div class="text-[12px] leading-[20px] font-[600] flex items-center gap-2 mx-auto">
+                <label for=""><i class="fa-solid fa-sack-dollar"></i></label>
+                <select class="bg-transparent cursor-pointer" name="USD" id="currency">
+                  <option value="USD" selected>USD</option>
+                  <option value="BDT">BDT</option>
+                </select>
+              </div>
+              <!-- Login Button -->
+              <button
+                class="p-[7px_9px_7px_9px] lg:p-[11px_18px_11px_17px] text-[13px] text-[#27213C] leading-[22px] font-[700] border border-[#FCAB00] bg-[#FCAB00] text-center rounded-[300px] hover:bg-transparent hover:text-[#FCAB00] duration-200">
+                <span class="whitespace-pre">Login</span>
+              </button>
+              <!-- Sign Up Button -->
+              <button
+                class="p-[7px_9px_7px_9px] lg:p-[11px_18px_11px_17px] text-[13px] text-[#27213C] leading-[22px] font-[700] border border-[#FCAB00] bg-[#FCAB00] text-center rounded-[300px] hover:bg-transparent hover:text-[#FCAB00] duration-200">
+                <span class="whitespace-pre">Sign Up</span>
+              </button>
+              <!-- Cart Button -->
+              <button
+                class="p-[11px_13px] text-[13px] text-[#27213C] leading-[22px] font-[700] border border-[#FCAB00] bg-[#FCAB00] text-center rounded-[300px] hover:bg-transparent hover:text-[#FCAB00] duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" stroke-width="1.5" aria-labelledby="title description" role="graphics-symbol">
+                  <title id="title">Cart Icon</title>
+                  <desc id="description">Cart icon with items</desc>
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+      </nav>
+
+      <section class="relative text-white py-10">
+        <img src="./assets/pseudo.png" alt="Banner Image" class="w-full h-[600px] lg:h-[350px]">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#27213CCC] to-[#27213C]">
+
+
+          <h3 class="text-[15px] pt-4">Home > Diablo IV > Builds > <span class="text-white/50">HotA Barbarian Build
+              Guide</span></h3>
+          <h1 class="lg:text-[47px] text-[40px] font-bold pt-[30px] pb-[17px]">HOTA Barbarian Build Guide</h1>
+          <span class="flex text-[15px]">Updated 23 Jul 2023 <li class="ml-3">created by <span
+                class="underline">Nurseos</span></li></span>
+          <div class="pt-[41px] pb-[27px]">TAGS: <button
+              class="px-2 py-1 bg-[#FCAB00] rounded text-black font-semibold text-[13px] ml-2">Diablo 4
+              Barbarian</button> <button
+              class="px-2 py-1 bg-[#FCAB00] rounded text-black font-semibold text-[13px] ml-2">Diablo 4 Build</button>
+          </div>
+          <p class="lg:text-[17px] sm:w-full leading-7 px-2 pt-7 sm:text-[14px]">Welcome to our Diablo 4 the Hammer of
+            the Ancients
+            Barbarian build guide! You’ll wield your <br>
+            colossal hammer to decimate hordes of foes. With a combination of mobility, crowd control, and <br>
+            strategic shouts, you’ll become an unstoppable force on the battlefield. Get ready to embrace the <br>
+            thrill of unleashing destruction as a HotA Barbarian!</p>
+        </div>
+      </section>
+
+
+    </div>
+  </header>
+  <!-- End Navbar-->
+
+  <div class="container mx-auto text-white">
+    <section
+      class="bg-gradient-to-b from-[#FCAB00] to-[#A06D00] bg-radial-gradient bg-linear-gradient py-[15px] lg:w-3/4 px-6 flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center rounded">
+      <div>
+        <h3 class="lg:text-[29px] font-bold uppercase lg:leading-[46px] sm:leading-3 pb-[11px] ">Buy Diablo 4 Hammer of
+          the <br>
+          Ancients Barbarian build!</h3>
+        <p class="text-[14px]">Get tone of the most powerful builds in the game!</p>
+      </div>
+      <div>
+        <img src="./assets/barb.png.png" alt="">
+      </div>
+    </section>
+
+    <section class="w-full lg:relative">
+      <div class="flex gap-4">
+
+
+        <div class="px-2 w-3/4">
+          <h1
+            class="lg:text-[36px] sm:text-[28px] font-bold pt-[32px] uppercase lg:font-semibold lg:leading-[40px] sm:leading-3">
+            Diablo 4 Hammer of the Ancients <br>
+            Barbarian Gameplay</h1>
+          <p class="py-[20px] text-[17px] leading-7">Here’s a simplified table outlining the key aspects of the HotA
+            Barbarian playstyle in
+            Diablo 4:</p>
+        </div>
+        <div class="w-1/4 custom-gradient px-2 py-4 rounded hidden lg:block">
+          <h4 class="text-gray-400 text-[20px] font-semibold">Table of contents</h4>
+          <span class="text-[14px] leading-[22px] px-2 text-white">Diablo 4 Hammer of the <br>
+            Ancients Barbarian Gameplay</span>
+          <hr class="border-gray-400 my-2">
+          <span class="text-[14px] leading-[22px] px-2 text-white">Diablo 4 HotA Barbarian <br>
+            Strengths and Weaknesses</span>
+          <hr class="border-gray-400 my-2">
+          <span class="text-[14px] leading-[22px] px-2 text-white">Diablo 4 HotA Barbarian <br> Skills</span>
+          <hr class="border-gray-400 my-2">
+          <span class="text-[14px] leading-[22px] px-2 text-white">Diablo 4 HotA Barbarian <br>
+            Gearing</span>
+          <hr class="border-gray-400 my-2">
+          <span class="text-[14px] leading-[22px] px-2 text-white">HotA Barbarian Best in Slot <br>
+            Gear</span>
+          <hr class="border-gray-400 my-2">
+          <span class="text-[14px] leading-[22px] px-2 text-white">Hammer of the Ancients
+            Barbarian Gems</span>
+          <hr class="border-gray-400 my-2">
+          <span class="text-[14px] leading-[22px] px-2 text-white">HotA Barbarian Elixirs and
+            Incenses</span>
+          <hr class="border-gray-400 my-2">
+          <span class="text-[14px] leading-[22px] px-2 text-white">Diablo 4 HotA Barbarian
+            Paragon Board</span>
+          <hr class="border-gray-400 my-2">
+          <span class="text-[14px] leading-[22px] px-2 text-white">Diablo 4 HotA Barbarian
+            Glyphs</span>
+          <hr class="border-gray-400 my-2">
+          <span class="text-[14px] leading-[22px] px-2 text-white">HotA Barbarian Stat <br>
+            Priorities</span>
+          <hr class="border-gray-400 my-2">
+        </div>
+      </div>
+      <!-- First Table -->
+      <section class="lg:w-3/4 px-2 lg:absolute lg:bottom-0">
+        <div class="text-[13px] border border-gray-700">
+          <div class=" flex justify-between text-center bg-[#333333]">
+            <div class="w-1/3 py-[12px]">Key Aspect</div>
+            <div class="w-2/3 py-[12px] ">Description</div>
+          </div>
+          <div class=" flex justify-between text-center">
+            <div class="w-1/3 py-[12px]">
+              <p>HotA</p>
+            </div>
+            <div class="w-2/3 py-[12px] text-start font-normal pl-2">
+              <p>Powerful AOE attack skill that forms the foundation of the build, maximizing damage output.</p>
+            </div>
+          </div>
+          <div class=" flex justify-between text-center bg-[#333333]">
+            <div class="w-1/3 py-[12px]">Fury Generation</div>
+            <div class="w-2/3 py-[12px] text-start pl-2">
+              <p>Initially challenging, but once resolved, significantly boosts the build’s potency.</p>
+            </div>
+          </div>
+          <div class=" flex justify-between text-center">
+            <div class="w-1/3 py-[12px]">
+              <p>Shouts</p>
+            </div>
+            <div class="w-2/3 py-[12px] text-start font-normal pl-2">
+              <p class="pb-2">Incorporates three shouts for various benefits:</p>
+              <li>Rallying Cry (Unstoppable and Fury generation)</li>
+              <li class="py-[5px]">War Cry (Berserking and increased damage)</li>
+              <li>Challenging Shout (damage reduction)</li>
+            </div>
+          </div>
+          <div class=" flex justify-between text-center bg-[#333333]">
+            <div class="w-1/3 py-[12px]">Mobility and Control</div>
+            <div class="w-2/3 py-[12px] text-start pl-2">
+              <p>Utilize your skills  to enhance mobility and control crowds.</p>
+            </div>
+          </div>
+          <div class=" flex justify-between text-center">
+            <div class="w-1/3 py-[12px]">
+              <p>Wrath of the Berserker</p>
+            </div>
+            <div class="w-2/3 py-[12px] text-start font-normal pl-2">
+              <p>Powerful skill providing additional damage and activating Berserking against Elites and Bosses.</p>
+            </div>
+          </div>
+        </div>
+        <p class="lg:text-[17px] leading-7 px-2 pt-7 sm:text-[14px]">All in all, The HotA Barbarian playstyle focuses on
+          delivering devastating AOE damage, managing <br>
+          Fury effectively, utilizing shouts for benefits, and incorporating mobility and crowd control skills. <br>
+          Mastering these elements allows players to effectively tackle challenging content in Diablo 4.</p>
+      </section>
+    </section>
+
+    <!-- Weaknesses Section -->
+    <div class="w-full lg:relative">
+      <div class="flex gap-4">
+        <section class="lg:w-3/4">
+          <div class="px-4">
+            <h1
+              class="lg:text-[36px] sm:text-[28px] font-bold pt-[32px] uppercase lg:font-semibold lg:leading-[40px] sm:leading-3">
+              Diablo 4 HotA Barbarian Strengths and <br>
+              Weaknesses</h1>
+  
+            <p class="lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">It’s important to know your chosen class well
+              before the end game.Understanding its strengths and <br>
+              weaknesses can greatly benefit you in future fights.</p>
+  
+            <img src="./assets/2.jpg.png" class="h-auto w-full" alt="">
+          </div>
+        </section>
+        <div class="card-items pt-10 hidden lg:block">
+          <div class="relative h-[350px] mb-4 w-full">
+            <!-- style="backgroundImage: url(dealBackground);" -->
+            <div class="absolute top-6 left-1/2 -translate-x-1/2 text-[#FFE86E] text-center">
+              <h2 class="text-2xl font-normal">Deal of Day</h2>
+              <p class="text-2xl">
+                <span>25%</span>
+                <span class="text-4xl font-medium">Off</span>
+              </p>
+            </div>
+            <img class="w-full h-full" src="./assets/deal-background-large.png.png" alt="" />
+            <div
+              class="absolute rounded-xl bottom-2 left-1/2 -translate-x-1/2 border-2 border-[#FCAB00] w-[96%] h-2/3 bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(162,111,2,0.6)_9%,rgba(130,85,20,0.5)_95%)]">
+              <div class="grid grid-cols-2 lg:gap-3 justify-between items-center">
+                <div class="p-3 lg:p-6">
+                  <h2 class="text-sm lg:text-[16px] font-bold text-white">
+                    Atlantis Armour Pack
+                  </h2>
+                  <p class="text-sm lg:text-[15px] font-normal text-white">
+                    Ends in 10 hours
+                  </p>
+                  <p class="text-xs lg:text-[15px] font-normal text-white mt-5">
+                    Atlantis Armour Pack
+                    discounted to 630
+                    Points (TODAY
+                    ONLY)
+                  </p>
+                </div>
+                <div class="p-2 lg:p-6 relative">
+                  <img class="m-auto" src="./assets/AtlantisArmourSet.png.png" alt="" />
+                  <button class="absolute bottom-14 left-1/2 -translate-x-1/2">
+                    <img src="./assets/Link.png" class="h-[30px] w-[40px]" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative h-[350px] mb-4 w-full">
+            <!-- style="backgroundImage: url(dealBackground);" -->
+            <div class="absolute top-6 left-1/2 -translate-x-1/2 text-[#FFE86E] text-center">
+              <h2 class="text-2xl font-normal">Deal of Day</h2>
+              <p class="text-2xl">
+                <span>25%</span>
+                <span class="text-4xl font-medium">Off</span>
+              </p>
+            </div>
+            <img class="w-full h-full" src="./assets/deal-background-large.png.png" alt="" />
+            <div
+              class="absolute rounded-xl bottom-2 left-1/2 -translate-x-1/2 border-2 border-[#FCAB00] w-[96%] h-2/3 bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(162,111,2,0.6)_9%,rgba(130,85,20,0.5)_95%)]">
+              <div class="grid grid-cols-2 lg:gap-3 justify-between items-center">
+                <div class="p-3 lg:p-6">
+                  <h2 class="text-sm lg:text-[16px] font-bold text-white">
+                    Atlantis Armour Pack
+                  </h2>
+                  <p class="text-sm lg:text-[15px] font-normal text-white">
+                    Ends in 10 hours
+                  </p>
+                  <p class="text-xs lg:text-[15px] font-normal text-white mt-5">
+                    Atlantis Armour Pack
+                    discounted to 630
+                    Points (TODAY
+                    ONLY)
+                  </p>
+                </div>
+                <div class="p-2 lg:p-6 relative">
+                  <img class="m-auto" src="./assets/AtlantisArmourSet.png.png" alt="" />
+                  <button class="absolute bottom-14 left-1/2 -translate-x-1/2">
+                    <img src="./assets/Link.png" class="h-[30px] w-[40px]" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative h-[350px] mb-4 w-full">
+            <!-- style="backgroundImage: url(dealBackground);" -->
+            <div class="absolute top-6 left-1/2 -translate-x-1/2 text-[#FFE86E] text-center">
+              <h2 class="text-2xl font-normal">Deal of Day</h2>
+              <p class="text-2xl">
+                <span>25%</span>
+                <span class="text-4xl font-medium">Off</span>
+              </p>
+            </div>
+            <img class="w-full h-full" src="./assets/deal-background-large.png.png" alt="" />
+            <div
+              class="absolute rounded-xl bottom-2 left-1/2 -translate-x-1/2 border-2 border-[#FCAB00] w-[96%] h-2/3 bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(162,111,2,0.6)_9%,rgba(130,85,20,0.5)_95%)]">
+              <div class="grid grid-cols-2 lg:gap-3 justify-between items-center">
+                <div class="p-3 lg:p-6">
+                  <h2 class="text-sm lg:text-[16px] font-bold text-white">
+                    Atlantis Armour Pack
+                  </h2>
+                  <p class="text-sm lg:text-[15px] font-normal text-white">
+                    Ends in 10 hours
+                  </p>
+                  <p class="text-xs lg:text-[15px] font-normal text-white mt-5">
+                    Atlantis Armour Pack
+                    discounted to 630
+                    Points (TODAY
+                    ONLY)
+                  </p>
+                </div>
+                <div class="p-2 lg:p-6 relative">
+                  <img class="m-auto" src="./assets/AtlantisArmourSet.png.png" alt="" />
+                  <button class="absolute bottom-14 left-1/2 -translate-x-1/2">
+                    <img src="./assets/Link.png" class="h-[30px] w-[40px]" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <section class="lg:w-3/4 px-2 py-10 lg:absolute bottom-0">
+        <div class="text-[13px] border border-gray-700">
+          <div class=" flex justify-between bg-[#333333] font-bold pl-4">
+            <div class="w-1/3 py-[12px]">Pros</div>
+            <div class="w-2/3 py-[12px] ">Cons</div>
+          </div>
+          <div class=" flex justify-between">
+            <div class="w-1/3 py-[12px]">
+              <p class="text-[#CCFFCC] pl-2">Offers powerful “Big Smash” attacks</p>
+            </div>
+            <div class="w-2/3 py-[12px] text-start font-normal pl-2">
+              <p class="text-[#FFCC99]">Limited to melee range combat</p>
+            </div>
+          </div>
+          <div class=" flex justify-between bg-[#333333]">
+            <div class="w-1/3 py-[12px] text-[#CCFFCC] pl-2">Requires low Fury cost for skill activation</div>
+            <div class="w-2/3 py-[12px] text-start pl-2">
+              <p class="text-[#FFCC99]">Performs mediocrely against single targets</p>
+            </div>
+          </div>
+          <div class=" flex justify-between">
+            <div class="w-1/3 py-[12px]">
+              <p class="text-[#CCFFCC] pl-2">Highly effective in group play situations</p>
+            </div>
+            <div class="w-2/3 py-[12px] text-start font-normal pl-2">
+              <p class="text-[#FFCC99]">Damage output is low when Fury is low</p>
+            </div>
+          </div>
+          <div class=" flex justify-between bg-[#333333]">
+            <div class="w-1/3 py-[12px] text-[#CCFFCC] pl-2">Provides a high chance of landing lucky hits</div>
+            <div class="w-2/3 py-[12px] text-start pl-2">
+              <p class="text-[#FFCC99]">Requires the use of a bludgeoning weapon</p>
+            </div>
+          </div>
+        </div>
+        <p class="lg:text-[17px] leading-7 px-2 pt-7 sm:text-[14px]">Make the most of the information available to you and
+          use it to your advantage. By leveraging your <br>
+          strengths and compensating for your weaknesses, you’ll increase your chances of emerging
+          victorious.</p>
+      </section>
+
+    </div>
+    <div class="card-items lg:hidden px-2 block">
+      <div class="relative h-[350px] mb-4 w-full">
+        <!-- style="backgroundImage: url(dealBackground);" -->
+        <div class="absolute top-6 left-1/2 -translate-x-1/2 text-[#FFE86E] text-center">
+          <h2 class="text-2xl font-normal">Deal of Day</h2>
+          <p class="text-2xl">
+            <span>25%</span>
+            <span class="text-4xl font-medium">Off</span>
+          </p>
+        </div>
+        <img class="w-full h-full" src="./assets/deal-background-large.png.png" alt="" />
+        <div
+          class="absolute rounded-xl bottom-2 left-1/2 -translate-x-1/2 border-2 border-[#FCAB00] w-[96%] h-2/3 bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(162,111,2,0.6)_9%,rgba(130,85,20,0.5)_95%)]">
+          <div class="grid grid-cols-2 lg:gap-3 justify-between items-center">
+            <div class="p-3 lg:p-6">
+              <h2 class="text-sm lg:text-[16px] font-bold text-white">
+                Atlantis Armour Pack
+              </h2>
+              <p class="text-sm lg:text-[15px] font-normal text-white">
+                Ends in 10 hours
+              </p>
+              <p class="text-xs lg:text-[15px] font-normal text-white mt-5">
+                Atlantis Armour Pack
+                discounted to 630
+                Points (TODAY
+                ONLY)
+              </p>
+            </div>
+            <div class="p-2 lg:p-6 relative">
+              <img class="m-auto" src="./assets/AtlantisArmourSet.png.png" alt="" />
+              <button class="absolute bottom-14 left-1/2 -translate-x-1/2">
+                <img src="./assets/Link.png" class="h-[30px] w-[40px]" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative h-[350px] mb-4 w-full">
+        <!-- style="backgroundImage: url(dealBackground);" -->
+        <div class="absolute top-6 left-1/2 -translate-x-1/2 text-[#FFE86E] text-center">
+          <h2 class="text-2xl font-normal">Deal of Day</h2>
+          <p class="text-2xl">
+            <span>25%</span>
+            <span class="text-4xl font-medium">Off</span>
+          </p>
+        </div>
+        <img class="w-full h-full" src="./assets/deal-background-large.png.png" alt="" />
+        <div
+          class="absolute rounded-xl bottom-2 left-1/2 -translate-x-1/2 border-2 border-[#FCAB00] w-[96%] h-2/3 bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(162,111,2,0.6)_9%,rgba(130,85,20,0.5)_95%)]">
+          <div class="grid grid-cols-2 lg:gap-3 justify-between items-center">
+            <div class="p-3 lg:p-6">
+              <h2 class="text-sm lg:text-[16px] font-bold text-white">
+                Atlantis Armour Pack
+              </h2>
+              <p class="text-sm lg:text-[15px] font-normal text-white">
+                Ends in 10 hours
+              </p>
+              <p class="text-xs lg:text-[15px] font-normal text-white mt-5">
+                Atlantis Armour Pack
+                discounted to 630
+                Points (TODAY
+                ONLY)
+              </p>
+            </div>
+            <div class="p-2 lg:p-6 relative">
+              <img class="m-auto" src="./assets/AtlantisArmourSet.png.png" alt="" />
+              <button class="absolute bottom-14 left-1/2 -translate-x-1/2">
+                <img src="./assets/Link.png" class="h-[30px] w-[40px]" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative h-[350px] mb-4 w-full">
+        <!-- style="backgroundImage: url(dealBackground);" -->
+        <div class="absolute top-6 left-1/2 -translate-x-1/2 text-[#FFE86E] text-center">
+          <h2 class="text-2xl font-normal">Deal of Day</h2>
+          <p class="text-2xl">
+            <span>25%</span>
+            <span class="text-4xl font-medium">Off</span>
+          </p>
+        </div>
+        <img class="w-full h-full" src="./assets/deal-background-large.png.png" alt="" />
+        <div
+          class="absolute rounded-xl bottom-2 left-1/2 -translate-x-1/2 border-2 border-[#FCAB00] w-[96%] h-2/3 bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(162,111,2,0.6)_9%,rgba(130,85,20,0.5)_95%)]">
+          <div class="grid grid-cols-2 lg:gap-3 justify-between items-center">
+            <div class="p-3 lg:p-6">
+              <h2 class="text-sm lg:text-[16px] font-bold text-white">
+                Atlantis Armour Pack
+              </h2>
+              <p class="text-sm lg:text-[15px] font-normal text-white">
+                Ends in 10 hours
+              </p>
+              <p class="text-xs lg:text-[15px] font-normal text-white mt-5">
+                Atlantis Armour Pack
+                discounted to 630
+                Points (TODAY
+                ONLY)
+              </p>
+            </div>
+            <div class="p-2 lg:p-6 relative">
+              <img class="m-auto" src="./assets/AtlantisArmourSet.png.png" alt="" />
+              <button class="absolute bottom-14 left-1/2 -translate-x-1/2">
+                <img src="./assets/Link.png" class="h-[30px] w-[40px]" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Skills Section -->
+    <section class="lg:w-3/4 hidden lg:block">
+      <div class="px-4">
+        <h1
+          class="hidden lg:block lg:text-[36px] sm:text-[28px] font-bold pt-[12px] uppercase lg:font-semibold lg:leading-[40px] sm:leading-3">
+          Diablo 4 HotA Barbarian Skills</h1>
+
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">As a Barbarian, you possess a
+          diverse array of skills that can turn the tides of battle in your favor. In
+          this section, we will explore each skill, its unique attributes, and how you can strategically utilize
+          them to dominate your adversaries. .</p>
+        <img src="./assets/1.jpg.png" class="hidden lg:block lg:h-[700px] lg:w-full" alt="">
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">Now, let’s delve into the specific
+          abilities of the HotA Barbarian that you can leverage to your <br>
+          advantage throughout the game..</p>
+      </div>
+    </section>
+    <section class="lg:w-3/4">
+      <div class="px-4">
+        <img src="./assets/3-1.jpg.png" class="hidden lg:block lg:h-full lg:w-full" alt="">
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">These abilities have been designed
+          to enhance your gameplay experience and provide you with <br>
+          convenient options in various situations. By understanding and utilizing these abilities effectively, <br>
+          you’ll be able to adapt to challenges, maximize your efficiency, and ensure a smoother gaming <br>
+          experience. Let’s explore these HotA Barbarian abilities and discover how they can work to your <br>
+          benefit.</p>
+
+        <span class="flex items-center gap-2 mb-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">Hammer of the Ancients</span>
+        <hr class="border-gray-700 my-4">
+        <span class="flex items-center gap-2 mb-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">Rallying Cry</span>
+        <hr class="border-gray-700 my-4">
+        <span class="flex items-center gap-2 mb-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">War City</span>
+        <hr class="border-gray-700 my-4">
+        <span class="flex items-center gap-2 mb-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">Challenging Shout</span>
+        <hr class="border-gray-700 my-4">
+        <span class="flex items-center gap-2 mb-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">Wreath of the Berserker</span>
+        <hr class="border-gray-700 my-4">
+        <span class="flex items-center gap-2 mb-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">Lunging Strike</span>
+        <hr class="border-gray-700 my-4">
+
+
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">Keep in mind that you can always
+          buy Diablo 4 Leveling boost on Overgear if you don’t feel like <br> wasting your time on it. With our help you
+          can level up your character from 1 to 100 quickly, unlock <br> the endgame content, extra difficulty modes,
+          and unique dungeons.</p>
+      </div>
+    </section>
+
+    <section class="lg:w-3/4">
+      <div class="px-4">
+        <h1
+          class="hidden lg:block lg:text-[36px] sm:text-[28px] font-bold pt-[12px] uppercase lg:font-semibold lg:leading-[40px] sm:leading-3">
+          Diablo 4 HotA Barbarian Gearing</h1>
+
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">Mastering the Diablo 4 HotA
+          Barbarian requires obtaining the right gear, which plays a vital role in your success.</p>
+        <img src="./assets/2-1.jpg.png" class="hidden lg:block lg:h-auto lg:w-full" alt="">
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">In this part, we’ll cover all the
+          essential aspects, including stats, unique items, gems, as well as elixirs and healing potions, to help you
+          excel in the game. </p>
+      </div>
+    </section>
+    <section class="lg:w-3/4">
+      <div class="px-4">
+        <h1
+          class="hidden lg:block lg:text-[36px] sm:text-[28px] font-bold pt-[12px] uppercase lg:font-semibold lg:leading-[40px] sm:leading-3">
+          HotA Barbarian Best in Slot Gear</h1>
+
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">Optimizing your Barbarian’s gear is
+          essential for mastering the game. Enhance your gameplay knowledge by exploring the essential items, elements,
+          and statistics outlined below.</p>
+        <span class="flex items-center gap-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">Gearing Options</span>
+        <hr class="border-gray-700 my-4">
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-4 pb-8 sm:text-[14px]">While these items can greatly
+          enhance your gameplay, it’s important to keep in mind their rarity and <br> the fact that they may not be
+          accessible to every player. Therefore, it’s wise to have alternative <br> options in mind when building your
+          character. If you dont feel like leveling and gearing your <br> character <span class="underline">buy limited
+            Diablo 4 Ultimate Bundle!</span> </p>
+      </div>
+    </section>
+
+    <section class="lg:w-3/4">
+      <div class="px-4">
+        <h1
+          class="hidden lg:block lg:text-[36px] sm:text-[28px] font-bold pt-[12px] uppercase lg:font-semibold lg:leading-[40px] sm:leading-3">
+          HotA Barbarian Stat Priorities</h1>
+
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">Gear in Diablo 4 comes with various
+          stats and status effects, but not all of them are important for <br> your specific build. Here’s a general
+          breakdown of important stats and a priority list for each gear <br> slot.</p>
+        <span class="flex items-center gap-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">Stats for HotA Barb</span>
+        <hr class="border-gray-700 my-4">
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-4 pb-8 sm:text-[14px]">Note, that some stats may prevent
+          others from appearing or may only be found on certain gear <br> slots. </p>
+      </div>
+    </section>
+    <section class="lg:w-3/4">
+      <div class="px-4">
+        <h1
+          class="hidden lg:block lg:text-[36px] sm:text-[28px] font-bold pt-[12px] uppercase lg:font-semibold lg:leading-[40px] sm:leading-3">
+          Hammer of the Ancients Barbarian Gems</h1>
+
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">When it comes to enhancing your
+          Barbarian’s gear, it’s essential to focus on specific stats and <br> status effects that truly matter for your
+          build. To help you with this, here’s a simplified breakdown and priority list for each equipment slot.</p>
+
+        <p class="hidden lg:block lg:text-[17px] leading-7 sm:text-[14px]">Helm, Chest Armor, and Pants: <span
+            class="text-blue-600">Royal Sapphires.</span></p>
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-4 sm:text-[14px]">Jewelry: Royal Skulls.</p>
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-4 sm:text-[14px]">Weapon Slots: <span
+            class="text-green-700">Royal Emeralds.</span></p>
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">By strategically placing these
+          gems, you’ll maximize the potential of your HotA Barbarian.</p>
+      </div>
+    </section>
+
+    <section class="lg:w-3/4">
+      <div class="px-4">
+        <h1
+          class="hidden lg:block lg:text-[36px] sm:text-[28px] font-bold pt-[12px] uppercase lg:font-semibold lg:leading-[40px] sm:leading-3">
+          HotA Barbarian Elixirs and Incenses</h1>
+
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">To enhance your gameplay as a
+          Hammer of the Ancients Barbarian in Diablo 4, make sure to visit <br> the Alchemist in any main town. The
+          Alchemist offers the ability to craft beneficial Elixirs and <br> Incenses with various effects. For this
+          build, the recommended crafted Elixir is the Precision Elixir,<br> which boosts both Critical Strike Chance
+          and Critical Strike Damage.</p>
+        <span class="flex items-center gap-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">Elixirs and Incenses</span>
+        <hr class="border-gray-700 my-4">
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-4 pb-8 sm:text-[14px]">By utilizing these crafted and
+          found elixirs, you can bolster your Barbarian’s capabilities and gain an <br> edge in combat. </p>
+      </div>
+    </section>
+
+    <section
+      class="bg-gradient-to-b from-[#FCAB00] to-[#A06D00] bg-radial-gradient bg-linear-gradient py-[15px] lg:w-3/4 px-6 flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center rounded">
+      <div>
+        <h3 class="lg:text-[29px] font-bold uppercase lg:leading-[46px] sm:leading-3 pb-[11px] ">Buy D4 HotA Barbarian
+          Gearing <br> Services!</h3>
+        <p class="text-[14px]">Get the number of BIS items.</p>
+      </div>
+      <div>
+        <img src="./assets/barb.png.png" alt="">
+      </div>
+    </section>
+
+    <section class="lg:w-3/4 hidden lg:block">
+      <div class="px-4">
+        <h3 class="lg:text-[29px] font-bold uppercase lg:leading-[46px] pt-3 sm:leading-3 pb-[11px] ">Diablo 4 HotA
+          Barbarian Paragon Board</h3>
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">The Paragon system becomes
+          accessible when you reach level 50. Paragon Nodes offer a range of <br> beneficial effects, from minor stats
+          found in Normal and Magic Nodes to more potent and unique <br> bonuses in <span class="text-[#FFFF00]">Rare
+            Nodes, Glyph Sockets,</span> and <span class="text-[#FF9900]">Legendary Nodes.</span></p>
+
+        <span class="flex items-center gap-2 mb-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">1. Starting Board</span>
+        <hr class="border-gray-700 my-4">
+        <span class="flex items-center gap-2 mb-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">2. Warbringer</span>
+        <hr class="border-gray-700 my-4">
+        <span class="flex items-center gap-2 mb-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">3. Flawless Technique</span>
+        <hr class="border-gray-700 my-4">
+        <span class="flex items-center gap-2 mb-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">4. Decimator</span>
+        <hr class="border-gray-700 my-4">
+        <span class="flex items-center gap-2 mb-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">5. Blood Rage</span>
+        <hr class="border-gray-700 my-4">
+        <span class="flex items-center gap-2 mb-2"><img src="./assets/show_more.svg.png" class="h-[12px] w-[12px]"
+            alt="">6. Bone Breaker</span>
+        <hr class="border-gray-700 my-4">
+
+
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-5 pb-8 sm:text-[14px]">To simplify the process, let’s
+          grasp the basic idea we’re aiming for. Our main focus is on <span class="text-[#FFFF00]">Glyphs</span> and
+          <br> the bonuses they provide. Once they reach level 15 or higher, they significantly enhance your build. <br>
+          Our strategy involves progressing through five boards and prioritizing the enhancement of our <br> <span
+            class="text-[#FFFF00]">Glyphs</span>. Along the way, we’ll also acquire a powerful Legendary Node called
+          <span class="text-[#FF9900]">Warbinger</span>, which <br> greatly boosts the Fortify effect. The other
+          Legendary Nodes may not be as valuable once you have <br> a complete endgame build.
+        </p>
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-5 pb-8 sm:text-[14px]">Apart from that, we’ll pick up
+          <span class="text-[#FFFF00]">Rare
+            Nodes</span> when they contribute to our overall strategy, particularly if <br>
+          they provide stats that amplify separate multiplier categories such as Critical Strike Damage and <br>
+          Vulnerable Damage. As you progress through the boards, you can rearrange your <span
+            class="text-[#FFFF00]">Glyphs</span> to <br> optimize their placement. For example, in our final board, we
+          have Wrath, which is an exceptionally <br>
+          powerful Glyph and should ideally be acquired earlier in the process.
+        </p>
+      </div>
+    </section>
+
+    <section class="lg:w-3/4 hidden lg:block">
+      <div class="px-4">
+        <h1
+          class="lg:text-[36px] sm:text-[28px] font-bold pt-[32px] uppercase lg:font-semibold lg:leading-[40px] sm:leading-3">
+          Diablo 4 HotA Barbarian Glyphs</h1>
+
+        <p class="lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">Paragon boards are characterized by the Glyphs they
+          use. Glyphs are placed in sockets and offer <br> massive benefits that increase with the required stats within
+          their radius. Glyphs can be levelled up <br> through successful Nightmare Dungeons completion. It’s crucial to
+          focus on levelling the Wrath <br> Glyph as it scales remarkably well. Here is a table showing the Glyphs we
+          utilize in our build, <br> ranked by levelling priority.</p>
+      </div>
+    </section>
+    <section class="lg:w-3/4 px-2 py-10 hidden lg:block">
+      <div class="text-[13px] border border-gray-700">
+        <div class=" flex justify-between bg-[#333333] font-bold pl-4">
+          <div class="w-1/3 py-[12px]">Glyphs</div>
+          <div class="w-2/3 py-[12px] ">Description</div>
+        </div>
+        <div class=" flex justify-between">
+          <div class="w-1/3 py-[12px]">
+            <p class="text-[#FFFF00] pl-2">Expliot</p>
+          </div>
+          <div class="w-2/3 py-[12px] text-start font-normal pl-2">
+            <p class="text-[#FFFF]">A truly powerful Glyph that automatically applies Vulnerable for 3 seconds. This is
+              a separate multiplier that’s hard to acquire for us. It’s crucial to have.</p>
+          </div>
+        </div>
+        <div class=" flex justify-between bg-[#333333]">
+          <div class="w-1/3 py-[12px] text-[#FFFF00] pl-2">Wrath</div>
+          <div class="w-2/3 py-[12px] text-start pl-2">
+            <p class="text-[#FFFF]">This Glyph, responsible for Critical Strike Damage, results in massive damage and
+              cannot be overlooked. Although it’s the last socketed Glyph in the endgame board, it should be placed
+              somewhere earlier to take advantage of its value before reaching level 100.</p>
+          </div>
+        </div>
+        <div class=" flex justify-between">
+          <div class="w-1/3 py-[12px]">
+            <p class="text-[#FFFF00] pl-2">Marshal</p>
+          </div>
+          <div class="w-2/3 py-[12px] text-start font-normal pl-2">
+            <p class="text-[#FFFF]">This Glyph revives our Shouts, which is our main goal as a Barbarian. It’s placed in
+              the Decimator board to intensify the Vulnerable nodes.</p>
+          </div>
+        </div>
+        <div class=" flex justify-between bg-[#333333]">
+          <div class="w-1/3 py-[12px] text-[#FFFF00] pl-2">Territorial</div>
+          <div class="w-2/3 py-[12px] text-start pl-2">
+            <p class="text-[#FFFF]">This Glyph always deals damage to nearby targets. It’s placed in the Bone Breaker
+              slot and can achieve 49 Dexterity, leading to +9.6% increased damage to close enemies, as well as 10%
+              Damage Reduction against close enemies.</p>
+          </div>
+        </div>
+        <div class=" flex justify-between">
+          <div class="w-1/3 py-[12px]">
+            <p class="text-[#FFFF00] pl-2">Disembowel</p>
+          </div>
+          <div class="w-2/3 py-[12px] text-start font-normal pl-2">
+            <p class="text-[#FFFF]">Due to all the nerfs to the shout cooldowns, this Glyph is needed to restore them.
+              Each enemy killed will be bleeding from the Two-Handed Sword Expertise Technique Slot.</p>
+          </div>
+        </div>
+        <div class=" flex justify-between bg-[#333333]">
+          <div class="w-1/3 py-[12px] text-[#FFFF00] pl-2">Crusher</div>
+          <div class="w-2/3 py-[12px] text-start pl-2">
+            <p class="text-[#FFFF]">This Glyph significantly enhances damage and can be greatly enhanced due to its
+              Strength requirement.</p>
+          </div>
+        </div>
+      </div>
+      <p class="lg:text-[17px] leading-7 px-2 pt-7 sm:text-[14px]">Once all your Glyphs hit level 15, continue levelling
+        them to 21 in the same order. Keep in mind that <br>
+        other worthwhile glyphs, like Undaunted and Imbiber, may be considered for survival.</p>
+    </section>
+
+    <section class="lg:w-3/4 hidden lg:block">
+      <div class="px-4">
+        <h1
+          class=" lg:text-[36px] sm:text-[28px] font-bold pt-[12px] uppercase lg:font-semibold lg:leading-[40px] sm:leading-3">
+          Diablo 4 HotA Barbarian Season 1 – The <br>
+          Malignant</h1>
+
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">In Diablo 4 Season 1, players
+          embark on an exciting new questline to track down and defeat <br>
+          Malignant Monsters spread throughout the world of Sanctuary. These formidable foes hold a <br>
+          valuable prize: Caged Hearts. By acquiring these precious artifacts and placing them in Jewelry- <br>
+          infested sockets, players can unlock extraordinary powers that enhance and modify their <br>
+          character’s build. Check out our Diablo 4 Season of the Malignant guide!</p>
+        <img src="./assets/1-4.jpg.png" class="hidden lg:block lg:h-auto lg:w-full" alt="">
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">In Diablo 4 Season 1, there are a
+          total of 32 Caged Hearts, each belonging to one of four distinct <br>
+          types, represented by different colors. These colors are:</p>
+
+        <li class="text-[16px] leading-6 mb-4"> <span class="text-[#FF9900] ">Vicious</span> (Orange): These Caged
+          Hearts grant offensive powers, empowering your character’s <br> attacks.</li>
+        <li class="text-[16px] leading-6 mb-4"> <span class="text-[#3366FF] ">Brutal</span> (Blue): Caged Hearts of this
+          type provide defensive powers, bolstering your character’s <br> resilience in battles.</li>
+        <li class="text-[16px] leading-6 mb-4"> <span class="text-[#FF99CC] ">Devious</span> (Pink): Caged Hearts in
+          this color offer utility powers, allowing your character to perform <br> special actions and abilities.</li>
+        <li class="text-[16px] leading-6 mb-4"> <span class="text-[#000] ">Wrathful</span> (Black): The Caged Hearts of
+          this type are called “Super” hearts and possess <br>
+          extraordinary powers.</li>
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 sm:text-[14px]">When socketing these Caged Hearts, there
+          are specific rules to follow. The first three Caged Hearts <br> must be placed into sockets that match their
+          respective infested socket colors. However, the fourth <br> Caged Heart can be inserted into any available
+          infested socket.</p>
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7  sm:text-[14px]">It’s important to note that once a
+          Caged Heart is socketed, it becomes permanent and cannot be <br> removed. However, if desired, they can be
+          broken down into Invokers. These Invokers can be used <br> to target farm specific Caged Hearts within the
+          Malignant Tunnels.</p>
+        <p class="hidden lg:block lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">Keep in mind that the higher the
+          level, the more powerful the Caged Hearts that will drop. So, as <br> you progress and face more challenging
+          enemies, you have a greater chance of obtaining stronger <br> Caged Hearts to enhance your character’s
+          abilities.</p>
+      </div>
+    </section>
+
+    <section class="lg:w-3/4 px-2 py-10 hidden lg:block">
+      <div class="text-[13px] border border-gray-700">
+        <div class=" flex justify-between bg-[#333333] font-bold pl-4">
+          <div class="w-1/3 py-[12px]">Name</div>
+          <div class="w-2/3 py-[12px] ">Description</div>
+        </div>
+        <div class=" flex justify-between">
+          <div class="w-1/3 py-[12px]">
+            <p class="text-[#FF9900] pl-2">Caged Heart of <br> Focused Rage</p>
+          </div>
+          <div class="w-2/3 py-[12px] text-start font-normal pl-2">
+            <p class="text-[#FFFF]">After spending 100-60 Fury within 2 seconds, your next Non-Basic Skill’s Critical
+              Strike Chance is increased by 20-30%.</p>
+          </div>
+        </div>
+        <div class=" flex justify-between bg-[#333333]">
+          <div class="w-1/3 py-[12px] text-[#FF9900] pl-2">Caged Heart of <br> the Malignant <br> Pact</div>
+          <div class="w-2/3 py-[12px] text-start pl-2">
+            <p class="text-[#FFFF]">Cycle through a Malignant bonus every 20 kills: <br> <br>
+              Vicious: Gain 21% Attack Speed. <br> <br>
+              Devious: Core and Basic Skills have a 16% chance to fully restore your Primary Resource. <br> <br> Brutal:
+              Every 20 seconds, gain a Barrier absorbing 85-102 damage.
+            </p>
+          </div>
+        </div>
+        <div class=" flex justify-between">
+          <div class="w-1/3 py-[12px]">
+            <p class="text-[#FF9900] pl-2">Caged Heart of <br> The Barber</p>
+          </div>
+          <div class="w-2/3 py-[12px] text-start font-normal pl-2">
+            <p class="text-[#FFFF]">Critical Strikes and all subsequent damage within 2.0-4.0 seconds is absorbed by
+              your target. Then, the absorbed damage erupts onto surrounding enemies. Stored damage is increased by 10%
+              per second.</p>
+          </div>
+        </div>
+    </section>
+
+    <div class="hidden lg:block w-3/4">
+      <section
+        class="bg-gradient-to-b from-[#FCAB00] to-[#A06D00] bg-radial-gradient bg-linear-gradient py-[15px] lg:w-full px-6 flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center rounded">
+        <div class="hidden lg:block">
+          <h3 class="lg:text-[29px] font-bold uppercase lg:leading-[46px] sm:leading-3 pb-[11px] ">Buy Diablo 4 Power
+            level boost!</h3>
+          <p class="text-[14px]">Get the desired level ASAP!</p>
+        </div>
+        <div class="hidden lg:block">
+          <img src="./assets/barb.png.png" alt="">
+        </div>
+      </section>
+      <p class="lg:text-[17px] leading-7 pt-7 pb-8 sm:text-[14px]">Harness the power of the HotA Barbarian and conquer
+        the fiery depths of Diablo 4. Unleash your <br> rage, seek powerful gear, and become a force to be reckoned
+        with. Stand tall, brave warrior, and let <br> your victories echo throughout Sanctuary. Now, go forth and leave
+        your mark on Diablo 4’s <br> battlefield.</p>
+      <hr class="border-gray-700 my-4">
+    </div>
+
+    <!-- Related Items Section -->
+    <section class=" py-[15px] lg:w-3/4 px-6 lg:flex-row lg:justify-between lg:items-center rounded">
+      <div>
+        <h3 class="lg:text-[35px] sm:text-[25px] pt-2 font-bold lg:leading-[46px] sm:leading-3 pb-[11px] ">Related items
+        </h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-10">
+        <div class="relative">
+          <img src="./assets/barbarian-feature-1024x576.jpg.png" class="w-full" alt="">
+          <div class="text-white absolute w-full bottom-0 font-bold bg-[#fcac0090] rounded-lg">
+            <p class="px-3 py-6">Diablo 4 Whirlwind Barbarian <br>Build Guide</p>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="./assets/cor-1024x364.png.png" class="w-full" alt="">
+          <div class="text-white absolute w-full bottom-0 font-bold bg-[#fcac0090] rounded-lg">
+            <p class="px-3 py-6">Diablo 4 Season of the <br> Malignant Guide</p>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="./assets/nightmare-dungeon-tier-list-guide-1024x364.jpg.png" class="w-full" alt="">
+          <div class="text-white absolute w-full bottom-0 font-bold bg-[#fcac0090] rounded-lg">
+            <p class="px-3 py-6">Diablo 4 Nightmare Dungeon <br> Tier Lists</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+  </div>
+  <div class="text-center text-white mb-32">
+    <h2 class="lg:text-[35px] text-[20px] font-bold lg:leading-[45px]">Are you a professional gamer or a supplier <br>
+      willing to work with Overgear?</h2>
+    <p class="py-5 sm:text-[14px] px-3">Join our team of over 5,000 of professional gamers and suppliers who get paid
+      <br>helping other gamers worldwide.
+    </p>
+    <button class="py-[11px] px-[13px] bg-[#FCAB00] rounded-full text-black font-bold">Start earning with
+      Overgear</button>
+  </div>
+
+  <!-- footer Section -->
+  <footer class="footer">
+    <div class="md:flex flex-row-reverse gap-4 mt-10">
+      <div class="md:flex md:w-2/3">
+        <div class="flex md:w-1/2 options1">
+          <div class=" options">
+            <h1 class="optionTitle">World of Warcraft</h1>
+            <a href="#">WoW Boosting</a>
+            <a href="#">WoW Gold</a>
+            <a href="#">Mythic+ Dungeon boost</a>
+            <a href="#">WoW Raid Boost</a>
+            <a href="#">PvP Boosting</a>
+          </div>
+          <div class=" options">
+            <h1 class="optionTitle">Overgear</h1>
+            <a href="#">About us</a>
+            <a href="#">Work with us</a>
+            <a href="#">Guides</a>
+            <a href="#">Contact us</a>
+            <a href="#">Get help</p>
+          </div>
+        </div>
+        <div>
+          <div class="flex options1">
+            <div class=" options">
+              <h1 class="optionTitle">Legal</h1>
+              <a href="#"> and conditions</a>
+              <a href="#">Privacy policy</a>
+              <a href="#">Refund policy</a>
+              <a href="#">Cookies policy</a>
+              <a href="#">Credential on File
+                Agreement</a>
+            </div>
+            <div class=" options">
+              <h1 class="optionTitle">WoW Classic</h1>
+              <a href="#">WotLK Boosting</a>
+              <a href="#">WotLK Gold</a>
+              <a href="#">WotLK Power Leveling</a>
+              <a href="#">WotLK Raids</a>
+              <a href="#">WotLK PvP Boosting</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="firstGrid md:w-1/3">
+        <img class="iconImage" src="/assets/icon.png" alt>
+        <img class="imageName" src="./assets/name.png" alt>
+        <div>
+          <i class="fa-brands fa-facebook icon"></i>
+          <i class="fa-brands fa-instagram icon"></i>
+          <i class="fa-brands fa-tiktok icon"></i>
+          <i class="fa-brands fa-youtube icon"></i>
+          <i class="fa-brands fa-twitter icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="md:flex justify-between address mt-2">
+      <p class="md:ml-28">© Overgear 2018-2023. All rights
+        reserved.</p>
+      <p class="md:mr-20">Diagorou 4, Kermia Building, 6th
+        floor,
+        Nicosia, Cyprus. Reg. number: HE395043</p>
+    </div>
+  </footer>
+</body>
+<script src="https://kit.fontawesome.com/c79b956231.js" crossorigin="anonymous"></script>
+
+</html>
